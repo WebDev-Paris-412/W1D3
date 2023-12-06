@@ -7,62 +7,58 @@
  * single quotes: ''
  * double quotes: ""
  * backticks: ``
+ * new String()
  */
 
-let teachingStaff = "Florian, Daniel, I'll break"
-let programmingHaiku = `I do Programming,
-Programing is what I do
-The sun is shining
-`
-// `
-// <div>
-//   <span>${teachingStaff}</span>
-// </div>
-// `
-
-//  Concatenation
-
-let firstName = "Rudy"
-console.log("Hello " + firstName + "!")
-console.log(`Hello ${firstName}!`)
-
+// "I'll go there"
 // Advantages of backticks
-
-//  Template literal
-
 // Multi-line
+let paragraph = `
+Dear Js,
+Thank you for allowing us to do multiples paragraphes.
+Sincerely.`
+let myName = "Florian"
+//  Concatenation
+const helloToYou = "Hello " + myName + "!"
+//  Template literal
+const helloAgain = `Hello ${myName}!`
 
 // index in Strings
-console.log(firstName[firstName.length - 1])
-console.log(firstName.at(-1))
-console.log(firstName.includes("ude"))
+
+console.log(myName[myName.length - 1])
+console.log(myName.at(-1))
 
 /**
  * Some available methods
  * length, upper / lower case, includes, replace, replaceAll ...
  */
-console.log(programmingHaiku.length)
-console.log(programmingHaiku.toUpperCase())
-console.log(programmingHaiku.toLowerCase().includes("pro"))
-console.log("RegExp attempt: ", programmingHaiku.match(/pro/i))
-console.log("a" < "A")
-//           97   65
 
+console.log(myName.replace("o", 0))
+console.log(myName)
+myName[0] = "L"
+console.log(myName)
+myName = "L" + myName.slice(1)
+console.log(myName)
+console.log(myName.includes("L"))
+console.log(myName.includes("a"))
 // Immutability
-
-const modifiedName =
-	firstName.slice(0, 3) + firstName[firstName.length - 1].toUpperCase()
-
-console.log(modifiedName)
 
 // Comparing strings
 
-console.log("abc" < "CDE")
+console.log("a" < "z")
+console.log("a" < "Z")
+console.log("art" === "art")
+const art = "art"
+const butter = "Butter"
+console.log(art.toLowerCase() < butter.toLowerCase())
 
-console.log("String comparisons: ", "2" === 2)
+console.log(2 == "2")
+console.log(2 === "2")
+//  !==
+console.log(2 !== "2")
 
-// function sum(a:number, b:number) {
-// 	return a + b
-// }
-
-// sum(3, 5)
+const unparsedText = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"
+const simpleSplit = "string splitting"
+console.log(simpleSplit.split(" ").join(" hello "))
+const separatedResult = unparsedText.split(":")
+console.log(separatedResult)

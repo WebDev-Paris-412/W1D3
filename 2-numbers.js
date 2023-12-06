@@ -12,75 +12,77 @@
  * modulo: %
  */
 
-let result = 2 / 3
+let result = 3 * (5 + 2)
+//           3 * 7
+//           21
+//  result = 21
 
 let remainder = 3 % 2
 
-const amountOfMinutes = 132
+const amountOfSeconds = 2045
 
-const amountOfHours = Math.floor(amountOfMinutes / 60)
-const amountOfRemainingMinutes = amountOfMinutes % 60
-console.log(amountOfHours, amountOfRemainingMinutes)
+const amountOfMinutes = amountOfSeconds / 60
+console.log(Math.floor(amountOfMinutes))
+console.log(amountOfSeconds % 60)
 
+console.log(Math.floor(4.7))
+console.log(Math.ceil(4.2))
+console.log(Math.round(4.5))
 // Order of operations
-
-/**
- * 5+5
- * 10 * 2
- * console.log
- */
 
 /**
  * Shorthand math
  */
 
-let total = 0
-
+let total = 1
 total = total + 2
-total = total + 3
-total += 5
-total *= 3
 console.log(total)
-
+total += 2
+console.log(total)
+total *= 5
+total /= 3
+console.log(Math.floor(total * 100) / 100)
+console.log(total.toFixed(2))
 // Math constructor
-
+// console.log(56532346754 > Infinity)
 console.log(Math.PI)
 
 // Getting a random number
-console.log("======Random======")
-// console.log(Math.random())
-const randomFloat = Math.random() // .76436
+
+console.log(Math.random())
+const randomFloat = Math.random()
 console.log(randomFloat)
-const randomLessThanTen = randomFloat * 10 // 7.6436
-console.log(randomLessThanTen)
-const randomInteger = Math.floor(randomLessThanTen) //  7
-console.log(randomInteger)
+const multipliedRandom = randomFloat * 100
+console.log(multipliedRandom)
+const actualRandomInt = Math.floor(multipliedRandom)
+console.log(actualRandomInt)
 
-const quickRandom = Math.floor(Math.random() * 20)
+const randomInt = Math.floor(Math.random() * 10)
+console.log(randomInt)
+const students = ["Evan", "Michaël", "Samara", "María", "Julien"]
 
-const myArray = ["Hungry", "Cat", "Sleep", "Nap"]
-
-console.log(myArray[Math.floor(Math.random() * myArray.length)])
+const randomIndex = Math.floor(Math.random() * students.length)
+console.log(students[randomIndex])
 
 // Operations between numbers and Strings
 
-console.log("2" + 2)
-console.log("2" - 2)
-const numberAsAString = "42aszf"
+console.log("2" + 1)
+console.log("3" - 1)
+
+console.log(Number((1 / 3).toFixed(2)) + 1)
+
+console.log(Number("test"))
+console.log(Number("4.532"))
+// console.log("first" * 5)
+console.log("hello" + " " + "class" + "!")
 
 // const gettingANumber = numberAsAString * 1
-const gettingANumber = Number(numberAsAString)
-console.log(gettingANumber)
-console.log(typeof gettingANumber)
-
 // NaN
-console.log(5 * "a")
-
-console.log(0.1 + 0.2)
-
 // Incrementing / Decrementing numbers
 
-let myLastNumber = 0
-myLastNumber += 1
-myLastNumber++
-myLastNumber--
+let increment = 1
+// increment = increment + 1
+// increment += 1
+console.log(increment++)
+console.log(increment)
+increment--
